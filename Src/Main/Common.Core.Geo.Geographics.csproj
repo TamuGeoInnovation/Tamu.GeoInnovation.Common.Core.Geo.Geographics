@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <!--  <UsingTask TaskName="USC.GISResearchLab.Common.BuildTasks.AutoIncrementBuildNumber" AssemblyFile="USC.GISResearchLab.Common.BuildTasks.dll" /> -->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B2B33994-371A-4F17-AD78-0794FEAAF034}</ProjectGuid>
+    <ProjectGuid>{1318A181-4A10-4662-9706-3597C6CDCFC1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Tamu.GeoInnovation.Common.Core.Geo.Geographics</RootNamespace>
@@ -24,7 +24,7 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -52,6 +52,7 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -63,6 +64,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoWarn>168,219,114,108</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +75,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Geo.Geographics\build\1.0.0\release\</OutputPath>
@@ -83,11 +86,15 @@
     <ErrorReport>prompt</ErrorReport>
     <NoWarn>168,219,114,108</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\..\_RepoConfig\SolutionFiles\packages\Microsoft.SqlServer.Types.11.0.1\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SQLSpatialTools">
-      <HintPath>..\..\..\..\..\..\..\..\DevDependencies\SQLServer\SQLSpatialTools\build\v1.0\bin\AnyCPU\release\SQLSpatialTools.dll</HintPath>
+      <HintPath>..\..\..\Common.Core.Kml\libs\SQLSpatialTools.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -100,33 +107,6 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Colors">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Colors\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Colors.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Drawing">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Drawing\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.ExceptionHandling">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\ExceptionHandling\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.ExceptionHandling.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Geo.Geometries">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Geo.Geometries\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Geo.Geometries.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Geo.Units">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Geo.Units\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Geo.Units.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Geo.Units.Converters">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Geo.Units.Converters\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Geo.Units.Converters.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Security">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Security\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Threading">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Threading\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="Tamu.GeoInnovation.Common.Core.Utils">
-      <HintPath>..\..\..\..\..\..\..\..\DevBuild\Tamu\GeoInnovation\Common\Core\Utils\build\1.0.0\release\Tamu.GeoInnovation.Common.Core.Utils.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Geographics\SqlGeographies\SqlGeographyUtils.cs" />
@@ -150,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -167,6 +148,44 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common.Core.Colors\Src\Main\Common.Core.Colors.Dev.csproj">
+      <Project>{34a8fc48-16d5-4937-8d33-14ae2ee362f4}</Project>
+      <Name>Common.Core.Colors.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Drawing\Src\Main\Common.Core.Drawing.Dev.csproj">
+      <Project>{282c24e4-e164-4679-aad4-e640b30404dc}</Project>
+      <Name>Common.Core.Drawing.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.ExceptionHandling\Src\Main\Common.Core.ExceptionHandling.Dev.csproj">
+      <Project>{4a553ae2-f5d1-42b6-be3a-8442df626eaf}</Project>
+      <Name>Common.Core.ExceptionHandling.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Geo.Geometries\Src\Main\Common.Core.Geo.Geometries.Dev.csproj">
+      <Project>{e8164c90-2753-46f3-937a-653039318563}</Project>
+      <Name>Common.Core.Geo.Geometries.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Geo.Units.Converters\Src\Main\Common.Core.Geo.Units.Converters.Dev.csproj">
+      <Project>{5cb3098f-54e7-427e-95ca-4d0ebba9e2ab}</Project>
+      <Name>Common.Core.Geo.Units.Converters.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Geo.Units\Src\Main\Common.Core.Geo.Units.Dev.csproj">
+      <Project>{5f42520e-2dda-4b4a-afe5-5f5e00e33d47}</Project>
+      <Name>Common.Core.Geo.Units.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Security\Src\Main\Common.Core.Security.Dev.csproj">
+      <Project>{d46e3a34-d2a4-4617-a13d-39e787c48c15}</Project>
+      <Name>Common.Core.Security.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Threading\Src\Main\Common.Core.Threading.Dev.csproj">
+      <Project>{fe6237ed-dcbb-43f5-a216-27cb99beafdb}</Project>
+      <Name>Common.Core.Threading.Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common.Core.Utils\Src\Main\Common.Core.Utils.Dev.csproj">
+      <Project>{0744a732-a7fe-4658-967d-c5a583ef08e4}</Project>
+      <Name>Common.Core.Utils.Dev</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!--  
