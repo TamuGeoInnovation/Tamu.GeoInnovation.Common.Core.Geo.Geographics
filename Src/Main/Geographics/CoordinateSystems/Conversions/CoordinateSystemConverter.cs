@@ -19,7 +19,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
             {
                 if (outputCS.GetType().Equals(typeof(GeographicCoordinateSystem)))
                 {
-                    ret = StatePlaneToDD(x, y, (StatePlane) inputCS, (LinearUnit) inputUnit);
+                    ret = StatePlaneToDD(x, y, (StatePlane)inputCS, (LinearUnit)inputUnit);
                 }
                 else
                 {
@@ -34,7 +34,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
                 }
                 else if (outputCS.GetType().Equals(typeof(ScreenCoordinateSystem)))
                 {
-                    ret = DDToScreen(x, y, (GeographicCoordinateSystem)inputCS, (ScreenCoordinateSystem)outputCS, (LinearUnit) outputUnit);
+                    ret = DDToScreen(x, y, (GeographicCoordinateSystem)inputCS, (ScreenCoordinateSystem)outputCS, (LinearUnit)outputUnit);
                 }
                 else
                 {
@@ -45,11 +45,11 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
             {
                 if (outputCS.GetType().Equals(typeof(GeographicCoordinateSystem)))
                 {
-                    ret = ScreenToDD(x, y, (ScreenCoordinateSystem) inputCS, (GeographicCoordinateSystem) outputCS, (NonLinearUnit)outputUnit);
+                    ret = ScreenToDD(x, y, (ScreenCoordinateSystem)inputCS, (GeographicCoordinateSystem)outputCS, (NonLinearUnit)outputUnit);
                 }
                 else if (outputCS.GetType().Equals(typeof(StatePlane)))
                 {
-                    ret = ScreenToStatePlane(x, y, (ScreenCoordinateSystem) inputCS, (StatePlane)outputCS, (LinearUnit)outputUnit);
+                    ret = ScreenToStatePlane(x, y, (ScreenCoordinateSystem)inputCS, (StatePlane)outputCS, (LinearUnit)outputUnit);
                 }
                 else
                 {
@@ -78,7 +78,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
         {
             double[] ret = new double[2];
 
-            double percentageX = x / inputCS.Width ;
+            double percentageX = x / inputCS.Width;
             double percentageY = y / inputCS.Height;
             ret[0] = outputCS.MinX + (percentageX * outputCS.Width);
             ret[1] = outputCS.MinY + (percentageY * outputCS.Height);
@@ -149,7 +149,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
                 System.Math.Atan(
                 (easting - statePlane.EastingGridBase) /
                 (statePlane.MappingRadius - northing + statePlane.NorthingGridBase)
-                ) * 
+                ) *
                 180 / System.Math.PI;
 
             // west longitude of station (point)
@@ -159,7 +159,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
             double u =
                 northing - statePlane.NorthingGridBase -
                 ((easting - statePlane.EastingGridBase) *
-                System.Math.Atan((easting - statePlane.EastingGridBase) / 
+                System.Math.Atan((easting - statePlane.EastingGridBase) /
                 (statePlane.MappingRadius - northing + statePlane.NorthingGridBase)) / 2);
 
             // north latitude of station (point)

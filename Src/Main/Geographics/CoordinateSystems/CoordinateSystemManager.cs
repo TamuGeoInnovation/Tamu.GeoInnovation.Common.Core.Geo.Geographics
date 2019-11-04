@@ -8,6 +8,6 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems
 
         public static string COORDINATE_SYSTEM_NAME_STATE_PLANE_0405 = "STATE_PLANE_0405";
         public static string COORDINATE_SYSTEM_NAME_STATE_PLANE_0406 = "STATE_PLANE_0406";
-        
+
     }
 }

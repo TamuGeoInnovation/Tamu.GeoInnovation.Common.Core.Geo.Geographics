@@ -41,7 +41,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Projected.Cart
         {
             get { return MaxX - MinX; }
         }
-	
+
         #endregion
 
         public CartesianCoordinateSystem(double minX, double minY, double maxX, double maxY)

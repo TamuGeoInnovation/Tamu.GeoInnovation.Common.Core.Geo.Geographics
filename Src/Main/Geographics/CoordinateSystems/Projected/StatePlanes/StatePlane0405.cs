@@ -53,6 +53,6 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.StatePlanes
         //public static double G3 = -3.72796E-20;		// polynomial coefficient of inverse
         //public static double G4 = -8.6394E-28;		// polynomial coefficient of inverse
 
-        
+
     }
 }

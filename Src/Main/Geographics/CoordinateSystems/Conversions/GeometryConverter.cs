@@ -14,7 +14,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.Conversions
             Geometry ret = null;
             if (inputGeometry.GetType().Equals(typeof(Polygon)))
             {
-                ret = ConvertPolygon((Polygon) inputGeometry, inputCS, inputUnit, outputCS, outputUnit);
+                ret = ConvertPolygon((Polygon)inputGeometry, inputCS, inputUnit, outputCS, outputUnit);
             }
             else if (inputGeometry.GetType().Equals(typeof(PolyLine)))
             {

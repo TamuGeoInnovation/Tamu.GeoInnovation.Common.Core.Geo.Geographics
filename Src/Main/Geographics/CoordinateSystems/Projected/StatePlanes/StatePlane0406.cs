@@ -4,7 +4,7 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems.StatePlanes
     {
         public StatePlane0406()
         {
-            
+
             Name = CoordinateSystemManager.COORDINATE_SYSTEM_NAME_STATE_PLANE_0406;
             Code = CoordinateSystemManager.COORDINATE_SYSTEM_CODE_STATE_PLANE_0406;
 
