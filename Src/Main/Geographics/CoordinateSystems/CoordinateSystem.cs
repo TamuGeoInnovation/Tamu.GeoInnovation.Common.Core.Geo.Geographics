@@ -5,20 +5,10 @@ namespace USC.GISResearchLab.Common.Geographics.CoordinateSystems
     public abstract class CoordinateSystem
     {
         #region Properties
-        private int _Code;
-        private string _Name;
 
-        public string Name
-        {
-            get { return _Name; }
-            set { _Name = value; }
-        }
 
-        public int Code
-        {
-            get { return _Code; }
-            set { _Code = value; }
-        }
+        public string Name { get; set; }
+        public int Code { get; set; }
         #endregion
 
         public override string ToString()
